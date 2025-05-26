@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FiExternalLink } from "react-icons/fi";
 import { Profile } from "../types/types";
 import { ClassColors } from "../constants/colors";
-import { extractPlayerGear } from "../utils/profile.util";
+import { extractPlayerGear } from "../utils/profile.utils";
 
 const ProfileCard = ({ profile }: { profile: Profile | null }) => {
   if (!profile) return null;
