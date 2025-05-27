@@ -9,9 +9,7 @@ import PlayerGear from "./PlayerGear";
 const ProfileCard = ({ profile }: { profile: Profile | null }) => {
   if (!profile) return null;
 
-  const playerGear = extractPlayerGear(profile)
-
-  console.log(playerGear)
+  const playerGear = extractPlayerGear(profile);
 
   return (
     <div className="bg-black border-2 border-white rounded px-4 py-8 mt-4 max-w-[600px]">
@@ -46,12 +44,21 @@ const ProfileCard = ({ profile }: { profile: Profile | null }) => {
           <p>
             {profile.race} | {profile.realm} ({profile.region.toUpperCase()})
           </p>
+          <div className="flex justify-center items-center gap-2 mt-4">
+            <Image
+              className="object-contain"
+              src='/AchievementPointLogo.png'
+              width={24}
+              height={24}
+              alt="Achievement Point Icon"
+            />
+            <p className="font-bold text-yellow-500">{profile.achievement_points}</p>
+          </div>
         </div>
-        <hr className="bg-white h-[2px]"/>
+        <hr className="bg-white h-[2px]" />
         <div className="flex flex-col gap-2 text-white">
           <div>
-            <h3 className="text-xl font-semibold">Player Gear: </h3>
-            <PlayerGear playerGear={playerGear}/>
+            <PlayerGear playerGear={playerGear} equippedItemLvl={profile.gear.item_level_equipped} />
           </div>
         </div>
         <a

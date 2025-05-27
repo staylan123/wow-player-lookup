@@ -3,15 +3,18 @@ import { PlayerGearCollection } from "../utils/profile.utils";
 import { PlayerGearSlotLabels } from "../constants/gear";
 import { ItemQualityColors } from "../constants/colors";
 
-const PlayerGear = ({ playerGear }: { playerGear: PlayerGearCollection }) => {
+const PlayerGear = ({ playerGear, equippedItemLvl }: { playerGear: PlayerGearCollection, equippedItemLvl: number }) => {
   return (
     <div>
+      <h3 className="text-xl font-semibold">Player Gear (Equipped iLvl - {equippedItemLvl}): </h3>
       {Object.entries(playerGear).map(([key, gearData]) => (
         <div>
-            <p>
-                <span className="font-bold">{PlayerGearSlotLabels[key]}: </span>
-                <span style={{color: ItemQualityColors[gearData.item_quality]}}>{gearData.name} (iLvl - {gearData.item_level})</span>
-            </p>
+          <p>
+            <span className="font-bold">{PlayerGearSlotLabels[key]}: </span>
+            <span style={{ color: ItemQualityColors[gearData.item_quality] }}>
+              {gearData.name} (iLvl - {gearData.item_level})
+            </span>
+          </p>
         </div>
       ))}
     </div>

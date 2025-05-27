@@ -16,7 +16,6 @@ export type Profile = {
   class: string;
   faction: string;
   gear: PlayerGear;
-  gender: string;
   last_crawled_at: string;
   name: string;
   profile_banner: string;
@@ -29,7 +28,7 @@ export type Profile = {
 
 export type PlayerGear = {
   created_at: string;
-  item_level_equpped: number;
+  item_level_equipped: number;
   items: {
     [key in PlayerGearSlots]: Gear;
   };
@@ -53,7 +52,6 @@ export type PlayerGearSlots =
   | "wrist";
 
 export type Gear = {
-  is_legendary: boolean;
   item_level: number;
   item_quality: number;
   name: string;
