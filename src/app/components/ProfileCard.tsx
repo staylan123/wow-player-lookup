@@ -4,10 +4,15 @@ import { FiExternalLink } from "react-icons/fi";
 import { Profile } from "../types/types";
 import { ClassColors } from "../constants/colors";
 import { extractPlayerGear } from "../utils/profile.utils";
+import PlayerGear from "./PlayerGear";
 
 const ProfileCard = ({ profile }: { profile: Profile | null }) => {
   if (!profile) return null;
-  console.log(extractPlayerGear(profile));
+
+  const playerGear = extractPlayerGear(profile)
+
+  console.log(playerGear)
+
   return (
     <div className="bg-black border-2 border-white rounded px-4 py-8 mt-4 max-w-[600px]">
       <div className="flex flex-col gap-4">
@@ -42,7 +47,13 @@ const ProfileCard = ({ profile }: { profile: Profile | null }) => {
             {profile.race} | {profile.realm} ({profile.region.toUpperCase()})
           </p>
         </div>
-        <div className="flex flex-col gap-2 text-white"></div>
+        <hr className="bg-white h-[2px]"/>
+        <div className="flex flex-col gap-2 text-white">
+          <div>
+            <h3 className="text-xl font-semibold">Player Gear: </h3>
+            <PlayerGear playerGear={playerGear}/>
+          </div>
+        </div>
         <a
           className="flex items-center gap-1 font-bold bg-orange-700 px-8 py-4 rounded cursor-pointer text-white w-fit m-auto"
           href={profile.profile_url}

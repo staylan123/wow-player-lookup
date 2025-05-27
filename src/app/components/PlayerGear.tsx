@@ -1,0 +1,21 @@
+import React from "react";
+import { PlayerGearCollection } from "../utils/profile.utils";
+import { PlayerGearSlotLabels } from "../constants/gear";
+import { ItemQualityColors } from "../constants/colors";
+
+const PlayerGear = ({ playerGear }: { playerGear: PlayerGearCollection }) => {
+  return (
+    <div>
+      {Object.entries(playerGear).map(([key, gearData]) => (
+        <div>
+            <p>
+                <span className="font-bold">{PlayerGearSlotLabels[key]}: </span>
+                <span style={{color: ItemQualityColors[gearData.item_quality]}}>{gearData.name} (iLvl - {gearData.item_level})</span>
+            </p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default PlayerGear;

@@ -13,3 +13,14 @@ export const ClassColors: Record<string, string> = {
   "Warlock": "#8788EE",
   "Warrior": "#C69B6D"
 };
+
+export const ItemQualityColors: Record<number, string> = {
+  0: "#9d9d9d",
+  1: "#ffffff",
+  2: "#1eff00",
+  3: "#0070dd",
+  4: "#a335ee",
+  5: "#ff8000",
+  6: "#e6cc80",
+  7: "#00ccff"
+};

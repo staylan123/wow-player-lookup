@@ -1,8 +1,17 @@
+import { PlayerGearSlotLabels } from "../constants/gear";
 import { PlayerGearSlots, Profile } from "../types/types";
 
-export const extractPlayerGear = (profile: Profile) => {
-  if (!profile) return null;
+export type PlayerGearData = {
+  is_legendary: boolean,
+  item_level: number,
+  item_quality: number,
+  name: string,
+  slotLabel: string
+}
 
+export type PlayerGearCollection= { [key: string] : PlayerGearData }
+
+export const extractPlayerGear = (profile: Profile) : PlayerGearCollection => {
   const { gear } = profile;
   const items = gear.items as any;
   const playerGear = {} as any;
@@ -15,6 +24,7 @@ export const extractPlayerGear = (profile: Profile) => {
       item_level: gear.item_level,
       item_quality: gear.item_quality,
       name: gear.name,
+      slotLabel: PlayerGearSlotLabels[slot]
     };
   }
 
