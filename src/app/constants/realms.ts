@@ -421,3 +421,50 @@ export const EU_REALMS: RealmOption[] = [
   { label: "Zirkel des Cenarius", value: "zirkel-des-cenarius" },
   { label: "Zuluhed", value: "zuluhed" },
 ];
+
+export const KR_REALMS: RealmOption[] = [
+  { label: "Alexstrasza", value: "alexstrasza" },
+  { label: "Azshara", value: "azshara" },
+  { label: "Burning Legion", value: "burning-legion" },
+  { label: "Cenarius", value: "cenarius" },
+  { label: "Dalaran", value: "dalaran" },
+  { label: "Deathwing", value: "deathwing" },
+  { label: "Durotan", value: "durotan" },
+  { label: "Garona", value: "garona" },
+  { label: "Gul'dan", value: "guldan" },
+  { label: "Hellscream", value: "hellscream" },
+  { label: "Hyjal", value: "hyjal" },
+  { label: "Malfurion", value: "malfurion" },
+  { label: "Norgannon", value: "norgannon" },
+  { label: "Zul'jin", value: "zuljin" }
+]
+
+export const TW_REALMS: RealmOption[] = [
+  { label: "Arthas", value: "arthas" },
+  { label: "Arygos", value: "arygos" },
+  { label: "Bleeding Hollow", value: "bleeding-hollow" },
+  { label: "Chillwind Point", value: "chillwind-point" },
+  { label: "Crystalpine Stinger", value: "crystalpine-stinger" },
+  { label: "Demon Fall Canyon", value: "demon-fall-canyon" },
+  { label: "Dragonmaw", value: "dragonmaw" },
+  { label: "Frostmane", value: "frostmane" },
+  { label: "Hellscream", value: "hellscream" },
+  { label: "Icecrown", value: "icecrown" },
+  { label: "Krol Blade", value: "krol-blade" },
+  { label: "Light's Hope", value: "lights-hope" },
+  { label: "Menethil", value: "menethil" },
+  { label: "Nightsong", value: "nightsong" },
+  { label: "Old Blanchy", value: "old-blanchy" },
+  { label: "Order of the Cloud Serpent", value: "order-of-the-cloud-serpent" },
+  { label: "Quel'dorei", value: "queldorei" },
+  { label: "Shadowmoon", value: "shadowmoon" },
+  { label: "Silverwing Hold", value: "silverwing-hold" },
+  { label: "Skywall", value: "skywall" },
+  { label: "Spirestone", value: "spirestone" },
+  { label: "Stormscale", value: "stormscale" },
+  { label: "Sundown Marsh", value: "sundown-marsh" },
+  { label: "Whisperwind", value: "whisperwind" },
+  { label: "World Tree", value: "world-tree" },
+  { label: "Wrathbringer", value: "wrathbringer" },
+  { label: "Zealot Blade", value: "zealot-blade" }
+]

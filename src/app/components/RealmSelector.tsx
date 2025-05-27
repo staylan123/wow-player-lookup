@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction } from "react";
 import Select from "react-select";
-import { EU_REALMS, US_REALMS } from "../constants/realms";
+import { EU_REALMS, KR_REALMS, TW_REALMS, US_REALMS } from "../constants/realms";
 import { RealmOption } from "../types/types";
 
 type RealmSelectorProps = {
@@ -17,6 +17,8 @@ const RealmSelector = ({
   const REGION_MAP: { [key: string]: RealmOption[] } = {
     US: US_REALMS,
     EU: EU_REALMS,
+    KR: KR_REALMS,
+    TW: TW_REALMS
   };
 
   return (
