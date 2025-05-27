@@ -1,5 +1,5 @@
 import { PlayerGearSlotLabels } from "../constants/gear";
-import { Gear, Profile } from "../types/types";
+import { Profile } from "../types/types";
 
 export type PlayerGearData = {
   item_level: number,
