@@ -1,13 +1,12 @@
-import React, { Dispatch, SetStateAction } from "react";
+"use-client"
+import React from "react";
 import { REGIONS } from "../constants/realms";
 import Image from "next/image";
+import { useProfileContext } from "../context/ProfileContext";
 
-type RegionSelectorProps = {
-  selectedRegion: string
-  setSelectedRegion: Dispatch<SetStateAction<string>>;
-}
+const RegionSelector = () => {
+  const { selectedRegion, setSelectedRegion } = useProfileContext()
 
-const RegionSelector = ({selectedRegion, setSelectedRegion} : RegionSelectorProps) => {
   return (
     <div>
       <fieldset className='flex gap-8' id="region">

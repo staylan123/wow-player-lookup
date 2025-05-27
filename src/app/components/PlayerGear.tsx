@@ -5,7 +5,7 @@ import { ItemQualityColors } from "../constants/colors";
 
 const PlayerGear = ({ playerGear, equippedItemLvl }: { playerGear: PlayerGearCollection, equippedItemLvl: number }) => {
   return (
-    <div>
+    <div className="text-white">
       <h3 className="text-xl font-semibold underline">Player Gear</h3>
       <p className="font-semibold text-yellow-500">Equipped iLvl - {equippedItemLvl}</p>
       {Object.entries(playerGear).map(([key, gearData]) => (
