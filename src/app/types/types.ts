@@ -48,6 +48,7 @@ export type PlayerGearSlots =
   | "legs"
   | "mainhand"
   | "offhand"
+  | "shirt"
   | "shoulder"
   | "trinket1"
   | "trinket2"

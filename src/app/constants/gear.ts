@@ -10,6 +10,7 @@ export const PlayerGearSlotLabels: Record<string, string> = {
     mainhand: "Main Hand",
     neck: "Neck",
     offhand: "Off Hand",
+    shirt: "Shirt",
     shoulder: "Shoulder",
     trinket1: "Trinket 1",
     trinket2: "Trinket 2",
