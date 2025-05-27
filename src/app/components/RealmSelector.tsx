@@ -23,7 +23,6 @@ const RealmSelector = ({
     <div>
       <label className="text-white font-semibold">Realm:</label>
       <Select
-        className="flex-3/5"
         options={REGION_MAP[selectedRegion.toUpperCase()]}
         value={selectedRealm}
         onChange={(realmOption) => setSelectedRealm(realmOption as any)}

@@ -6,6 +6,7 @@ import { RealmOption } from "../types/types";
 import useProfileLookUp from "../hooks/useProfileLookUp";
 import ProfileCard from "./ProfileCard";
 import Loader from "./Loader";
+import ProfileNameInput from "./ProfileNameInput";
 
 const ProfileSearch = () => {
   const [profileName, setProfileName] = useState<string>("Vylraya");
@@ -23,39 +24,29 @@ const ProfileSearch = () => {
 
   return (
     <div className="mt-8">
-      <div className="max-w-[400px]">
-        <div className="flex flex-col gap-4">
-          <>
-            <label className="font-semibold text-white" htmlFor="playerName">
-              Player Name:
-            </label>
-            <input
-              className="border-black border-1 flex-2/5 bg-white p-2"
-              type="text"
-              placeholder="Enter Player Name"
-              id="playerName"
-              value={profileName}
-              onChange={(e) => setProfileName(e.target.value)}
+      <div className="md:max-w-[768px] md:m-auto">
+        <div className="flex flex-col gap-4 md:justify-center">
+          <div>
+            <ProfileNameInput profileName={profileName} setProfileName={setProfileName}/>
+            <RealmSelector
+              selectedRegion={selectedRegion}
+              selectedRealm={selectedRealm}
+              setSelectedRealm={setSelectedRealm}
             />
-          </>
-          <RealmSelector
-            selectedRegion={selectedRegion}
-            selectedRealm={selectedRealm}
-            setSelectedRealm={setSelectedRealm}
-          />
+          </div>
           <RegionSelector
             selectedRegion={selectedRegion}
             setSelectedRegion={setSelectedRegion}
           />
           <button
-            className="bg-orange-800 px-4 py-2 rounded cursor-pointer max-w-[400px] text-white"
+            className="bg-orange-800 px-4 py-2 rounded cursor-pointer text-white max-w-[320px]"
             onClick={handleSearchProfile}
           >
             Search
           </button>
         </div>
       </div>
-      <div className="bg-gray-800 border-2 border-white rounded px-4 py-8 mt-4 max-w-[600px]">
+      <div className="bg-gray-800 border-2 border-white rounded px-4 py-8 mt-4 max-w-[720px] m-auto">
         {loading ? (
           <Loader />
         ) : error ? (

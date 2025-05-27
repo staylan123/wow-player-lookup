@@ -70,7 +70,7 @@ const ProfileCard = ({ profile }: { profile: Profile | null }) => {
           </div>
         </div>
         <a
-          className="flex items-center gap-1 font-bold bg-orange-700 px-8 py-4 rounded cursor-pointer text-white justify-center"
+          className="flex items-center gap-1 font-bold bg-orange-700 px-8 py-4 rounded cursor-pointer text-white justify-center max-w-[320px]"
           href={profile.profile_url}
           target="_blank"
         >
