@@ -1,8 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Select from "react-select";
-import { REGIONS } from "../constants/realms";
-import Image from "next/image";
 import RealmSelector from "./RealmSelector";
 import RegionSelector from "./RegionSelector";
 import { RealmOption } from "../types/types";
@@ -25,9 +22,9 @@ const ProfileSearch = () => {
   });
 
   return (
-    <div>
+    <div className="mt-8">
       <div className="max-w-[400px]">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <>
             <label className="font-semibold text-white" htmlFor="playerName">
               Player Name:
@@ -58,13 +55,15 @@ const ProfileSearch = () => {
           </button>
         </div>
       </div>
-      {loading ? (
-        <Loader />
-      ) : error ? (
-        <p>{error.message}</p>
-      ) : (
-        <ProfileCard profile={profile} />
-      )}
+      <div className="bg-gray-800 border-2 border-white rounded px-4 py-8 mt-4 max-w-[600px]">
+        {loading ? (
+          <Loader />
+        ) : error ? (
+          <p className="text-center text-white">{error.message}</p>
+        ) : (
+          <ProfileCard profile={profile} />
+        )}
+      </div>
     </div>
   );
 };

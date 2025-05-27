@@ -9,7 +9,7 @@ type RegionSelectorProps = {
 
 const RegionSelector = ({selectedRegion, setSelectedRegion} : RegionSelectorProps) => {
   return (
-    <div>
+    <div className="m-auto">
       <fieldset className='flex gap-4' id="region">
         {REGIONS.map((region) => {
           return (

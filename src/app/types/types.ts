@@ -16,6 +16,9 @@ export type Profile = {
   class: string;
   faction: string;
   gear: PlayerGear;
+  guild: {
+    name: string
+  }
   last_crawled_at: string;
   name: string;
   profile_banner: string;
