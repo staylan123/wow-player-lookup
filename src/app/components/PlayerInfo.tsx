@@ -53,7 +53,7 @@ const PlayerInfo = ({ profile }: { profile: Profile }) => {
             {profile.race} | {profile.realm} ({profile.region.toUpperCase()})
           </p>
           <p>&lt;{profile.guild.name}&gt;</p>
-          <a className="flex items-center gap-2 text-orange-500 underline justify-center md:justify-start"><FiExternalLink /> Raider.IO Profile</a>
+          <a href={profile.profile_url} target="_blank" className="flex items-center gap-2 text-orange-500 underline justify-center cursor md:justify-start"><FiExternalLink /> Raider.IO Profile</a>
         </div>
       </div>
     </div>
