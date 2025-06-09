@@ -1,4 +1,3 @@
-import React from "react";
 import { useProfileContext } from "../context/ProfileContext";
 import Loader from "./Loader";
 import ProfileContent from "./ProfileContent";

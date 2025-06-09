@@ -1,4 +1,3 @@
-import React from "react";
 import { ClassColors } from "../constants/colors";
 import { Profile } from "../types/types";
 import { FiExternalLink } from "react-icons/fi";

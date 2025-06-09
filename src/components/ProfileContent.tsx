@@ -1,4 +1,3 @@
-import React from 'react'
 import PlayerInfo from './PlayerInfo'
 import PlayerGear from './PlayerGear'
 import { useProfileContext } from '../context/ProfileContext'
